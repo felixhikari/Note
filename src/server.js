@@ -6,7 +6,7 @@ const errorhandler = require('./middleware/errorHandler');
 require('dotenv').config();
 
 // Connect to MongoDB
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 8000;
 const host = process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost';
 
 
