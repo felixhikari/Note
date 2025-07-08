@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+</head>
+<style>
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-content: center;
+    }
+    .note-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows: repeat(auto-fill, 300px);
+        width: 90%;
+        gap: 10px;
+        height: fit-content;
+        padding: 30px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .wraped{
+        background-color: #ca9191;
+        padding: 15px;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <div class="note-container">
+        <div id="close" >
+            <div id="close-right"></div>
+            <div id="close-left"></div>
+        </div>
+        <style>
+            #close-right, #close-left {
+                width: 20px;
+                height: 20px;
+                background-color: #ca9191;
+                position: absolute;
+            }
+            #close-right {
+                transform: rotate(45deg);
+            }
+            #close-left {
+                transform: rotate(-90deg);
+            }
+        </style>
+        <main>
+            <div class="note">
+                <div>
+                    <h2 class="wraped">Note Title</h2>
+                    <span class="category wraped">Urgent</span>
+                    <br>
+                    <br>
+                    <br>
+                    <span class="date wraped">2023-10-01</span>
+                </div>
+                <p class="wraped">This is a sample note content. You can write anything you want here.</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
